@@ -1,12 +1,26 @@
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 body{
-  	background-image: url("../images/back_index.jpg");
-  	background-repeat: no-repeat;
-  	background-attachment: fixed;
-  	background-position: center;
-  	background-size: cover;
+background: linear-gradient(0deg, rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url("../images/back_index.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
+.padd{
+padding-top: 30px;
+padding-bottom: 30px;
+}
+::placeholder {
+color: red;
+opacity: 1;
+}
+.form-control{
+background:transparent;
+border-radius:0px;
+border:0px;
+border-bottom: 1px solid white;			color:white;
 }
