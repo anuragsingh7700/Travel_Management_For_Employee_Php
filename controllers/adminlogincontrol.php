@@ -20,7 +20,7 @@ if (mysqli_num_rows($result) > 0) {
 		// print_r($row2);
 		session_start();
 		$_SESSION["name"] = $row2["name"];
-		$_SESSION["email"] = $row2["email"];
+		$_SESSION["id"] = $row2["id"];
 		$_SESSION["valid"] = true;
 		// echo "Checkpoint 2";
 		header("Location:../admin_dashboard.php");

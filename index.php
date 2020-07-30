@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Homegage</title>
+		<title>Homepage</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -86,8 +86,8 @@ session_start();
 								<div class="modal-content bg-dark">
 									
 									<!-- Modal Header -->
-									<div class="modal-header bg-secondary">
-										<h4 class="modal-title">Employee Login</h4>
+									<div class="modal-header bg-secondary ">
+										<h4 class="modal-title text-light">Employee Login</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									</div>
 									
