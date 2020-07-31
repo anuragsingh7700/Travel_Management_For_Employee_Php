@@ -28,9 +28,9 @@ if ($_SESSION["valid"] == true) {
               <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split mr-2" data-toggle="dropdown">
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item bg-secondary" href="#">Change Password</a>
-                <a class="dropdown-item " href="emp_update_profile.php">Update Profile</a>
                 <a class="dropdown-item " href="emp_view_profile.php">View Profile</a>
+                <a class="dropdown-item " href="emp_update_profile.php">Update Profile</a>
+                <a class="dropdown-item bg-secondary" href="#">Change Password</a>
               </div>
             </div>
             <a class="btn btn-outline-danger rounded mr-2" href="controllers/logoutcontrol.php">Logout</a>

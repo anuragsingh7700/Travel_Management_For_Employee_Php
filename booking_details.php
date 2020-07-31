@@ -26,9 +26,9 @@ if ($_SESSION["valid"] == true) {
 							<button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split mr-3" data-toggle="dropdown">
 							</button>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">View Profile</a>
-								<a class="dropdown-item" href="#">Update Profile</a>
-								<a class="dropdown-item" href="#">Change Password</a>
+								<a class="dropdown-item" href="emp_view_profile.php">View Profile</a>
+								<a class="dropdown-item" href="emp_update_password.php">Update Profile</a>
+								<a class="dropdown-item" href="emp_change_password.php">Change Password</a>
 							</div>
 						</div>
 						<a  class="btn btn-outline-danger" href="controllers/logoutcontrol.php">Logout</a>
@@ -50,7 +50,7 @@ if ($_SESSION["valid"] == true) {
 					<td><?php echo $row["driver"]?></td>
 				</tr>
 				<tr>
-					<td>Driver</td>
+					<td>phone</td>
 					<td><?php echo $row["phone"]?></td>
 				</tr>
 				<tr>

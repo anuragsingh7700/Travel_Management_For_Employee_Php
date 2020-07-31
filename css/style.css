@@ -14,10 +14,6 @@ background-size: cover;
 padding-top: 30px;
 padding-bottom: 30px;
 }
-::placeholder {
-color: red;
-opacity: 1;
-}
 .form-control{
 background:transparent;
 border-radius:0px;

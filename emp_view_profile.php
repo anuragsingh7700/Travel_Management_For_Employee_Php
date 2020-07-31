@@ -33,9 +33,9 @@ $row = mysqli_fetch_assoc($result);
               <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split mr-2" data-toggle="dropdown">
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="admin_change_password.php">Change Password</a>
-                <a class="dropdown-item" href="admin_update_profile.php">Update Profile</a>
                 <a class="dropdown-item bg-secondary" href="#">View Profile</a>
+                <a class="dropdown-item" href="admin_update_profile.php">Update Profile</a>
+                <a class="dropdown-item" href="admin_change_password.php">Change Password</a>
               </div>
             </div>
             <a class="btn btn-outline-danger rounded mr-2" href="controllers/logoutcontrol.php">Logout</a>

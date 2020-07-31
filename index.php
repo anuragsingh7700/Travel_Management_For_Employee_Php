@@ -26,7 +26,7 @@ session_start();
 						<a class="nav-link text-white" target="_blank" href="https://www.tcetmumbai.in/">TCET's Website</a>
 					</li>
 					<li class="nav-item p-2">
-						<a class="nav-link text-white " href="#">About Us</a>
+						<a class="nav-link text-white " href="developers.html">Developers</a>
 					</li>
 					<li class="nav-item p-2">
 						<a class="nav-link text-white btn btn-outline-secondary" data-toggle="modal" data-target="#myModal1">Admin</a>
@@ -94,7 +94,7 @@ session_start();
 									<!-- Modal body -->
 									<div class="modal-body">
 										<form action="controllers/logincontrol.php" method="post">
-											<input class="form-control p-2" type="text" name="empid" placeholder="Employee Id" required autocomplete="off">
+											<input class="form-control p-2" type="text" name="empid" placeholder="Employee Id" required autocomplete="off" maxlength="11">
 											<input class="form-control mt-3 p-2" type="password" name="password" placeholder="Password" required>
 											<input class=" mt-4 btn btn-outline-success col-6" type="submit" value="Login">
 										</form>

@@ -83,6 +83,7 @@ if ($_SESSION["valid"] == true) {
 										<?php
 											$sql1 = "SELECT * from employee_details";
 											$result1 = mysqli_query($conn, $sql1);
+											if (mysqli_num_rows($result1)>0){
 											while($row = mysqli_fetch_assoc($result1)){
 										?>
 										<tr>
@@ -91,7 +92,11 @@ if ($_SESSION["valid"] == true) {
 											<td><?php echo $row['phone_no'];?></td>
 											<td><?php echo $row['pincode'];?></td>
 										</tr>
-										<?php }?>
+										<?php }
+									} else{
+										echo "<h3 class='text-info'>No Employees registered</h3>";
+									}
+										?>
 									</table>
 								</div>
 							</div>
@@ -117,22 +122,29 @@ if ($_SESSION["valid"] == true) {
 											<tr>
 												<th>Name</th>
 												<th>Mobile</th>
+												<th>Email</th>
 												<th>Timings</th>
 												<th>driving Liscense</th>
 											</tr>
 										</thead>
 										<?php
-											$sql1 = "SELECT name,phone_no, shift_end,shift_start, dl_no from driver";
+											$sql1 = "SELECT name,email,phone_no, shift_end,shift_start, dl_no from driver";
 											$result1 = mysqli_query($conn, $sql1);
+											if (mysqli_num_rows($result1)>0){
 											while($row = mysqli_fetch_assoc($result1)){
 										?>
 										<tr>
 											<td><?php echo $row['name'];?></td>
 											<td><?php echo $row['phone_no'];?></td>
+											<td><?php echo $row['email'];?></td>
 											<td><?php echo $row['shift_start']."-".$row["shift_end"];?></td>
 											<td><?php echo $row['dl_no'];?></td>
 										</tr>
-										<?php }?>
+										<?php }
+									}else{
+										echo "<h3 class='text-info'>No Drivers registered</h3>";
+									}
+									?>
 									</table>
 								</div>
 							</div>
@@ -165,6 +177,7 @@ if ($_SESSION["valid"] == true) {
 										<?php
 											$sql1 = "SELECT * from vehicle";
 											$result1 = mysqli_query($conn, $sql1);
+											if (mysqli_num_rows($result1)>0){
 											while($row = mysqli_fetch_assoc($result1)){
 										?>
 										<tr>
@@ -173,7 +186,11 @@ if ($_SESSION["valid"] == true) {
 											<td><?php echo $row['seats'];?></td>
 											<td><?php echo $row['color'];?></td>
 										</tr>
-										<?php }?>
+										<?php }
+									}else{
+										echo "<h3 class='text-info'>No Vehicles registered</h3>";
+									}
+									?>
 									</table>
 								</div>
 							</div>

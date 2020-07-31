@@ -19,12 +19,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	require("../res/db.php");
 // Creates connection
 	$conn = dbconnect();
-	$sql = "INSERT INTO `journey_details`(`j_id`, `v_id`, `d_id`, `e_id`, `objective`, `date`, `start`, `end`, `booking_time`,`pickup_addr`,`drop_addr`) VALUES ('', $v_id, $d_id, $e_id, '$objective', '$date', '$start', '$end', 'NOW()', '$pickup', '$drop')";
+	$sql = "SELECT password from employee where id=$e_id";
 	$result = mysqli_query($conn,$sql);
-	if($result){
-		header("Location:../emp_dashboard.php?s=true&msg=Booking Successful!");
+	$row = mysqli_fetch_assoc($result);
+	if ($password == $row){
+		$sql = "INSERT INTO `journey_details`(`j_id`, `v_id`, `d_id`, `e_id`, `objective`, `date`, `start`, `end`, `booking_time`,`pickup_addr`,`drop_addr`) VALUES ('', $v_id, $d_id, $e_id, '$objective', '$date', '$start', '$end', 'NOW()', '$pickup', '$drop')";
+		$result = mysqli_query($conn,$sql);
+		if($result){
+			header("Location:../emp_dashboard.php?s=true&msg=Bingo! Booking is Successful.");
+		}else{
+			header("Location:../emp_dashboard.php?s=false&msg=Booking Failed");}
 	}else{
-		header("Location:../emp_dashboard.php?s=false&msg=Booking Failed");}
+		header("Location:../emp_dashboard.php?s=false&msg=Booking Unsuccessful! Password Invalid, Please try again");}
+	}
 mysqli_close($conn);
 }else{
 	header("Location:../emp_dashboard.php?s=false&msg=Encountered Some Technical Error!");

@@ -84,7 +84,7 @@ if ($_SESSION["valid"] == true) {
 									<div class="modal-body text-center">
 										<form action="book_new.php" method="get">
 											<label>Journey Date</label>
-											<input class="form-control p-2" type="date" name="date" placeholder="Journey" required autocomplete="off">
+											<input class="form-control p-2" type="date" name="date" placeholder="Journey" required autocomplete="off" min="<?php echo date("Y-m-d")?>">
 											<label>Number of Passengers</label>
 											<select name="seats" class="form-control" required>
 												<option value="1">1</option>
@@ -95,13 +95,14 @@ if ($_SESSION["valid"] == true) {
 												<option value="6">6</option>
 											</select>
 											<label>Journey Time slot</label>
+											<p class="text-info">Working hours 07:00 to 22:00</p>
 											<div class="row form-group justify-content-around">
 											<div class="column">
 											<label>Start Time</label>
-											<input class="form-control mt-3 p-2" type="time" name="start_time" placeholder="start_time" required></div>
+											<input class="form-control mt-3 p-2" type="time" name="start_time" placeholder="start_time" required  min="07:00" max="22:00"></div>
 											<div class="column">
 											<label>End Time</label>
-											<input class="form-control mt-3 p-2" type="time" name="end_time" placeholder="end_time" required></div>
+											<input class="form-control mt-3 p-2" type="time" name="end_time" placeholder="end_time" required  min="07:01" max="22:00"></div>
 											</div>
 										</div>
 											<input class=" my-4 mx-auto btn btn-outline-success col-6" type="submit" value="Search">
