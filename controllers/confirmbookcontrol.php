@@ -29,11 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			header("Location:../emp_dashboard.php?s=true&msg=Bingo! Booking is Successful.");
 		}else{
 			header("Location:../emp_dashboard.php?s=false&msg=Booking Failed");}
-	}else{
-		header("Location:../emp_dashboard.php?s=false&msg=Booking Unsuccessful! Password Invalid, Please try again");}
 	}
+	else if ($password != $row) {
+		header("Location:../emp_dashboard.php?s=false&msg=Booking Unsuccessful! Password Invalid, Please try again");}
+
+	else{
+		header("Location:../emp_dashboard.php?s=false&msg=Encountered Some Technical Error!");
+		
+		}
 mysqli_close($conn);
-}else{
-	header("Location:../emp_dashboard.php?s=false&msg=Encountered Some Technical Error!");
+
 }
 ?>
