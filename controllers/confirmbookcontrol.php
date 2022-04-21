@@ -27,13 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$result = mysqli_query($conn,$sql);
 		if($result){
 			header("Location:../emp_dashboard.php?s=true&msg=Bingo! Booking is Successful.");
-		}else{
-			header("Location:../emp_dashboard.php?s=false&msg=Booking Failed");}
-	}else{
-		header("Location:../emp_dashboard.php?s=false&msg=Booking Unsuccessful! Password Invalid, Please try again");}
+		}
+		else{
+			header("Location:../emp_dashboard.php?s=false&msg=Booking Failed");
+		}
 	}
-mysqli_close($conn);
-}else{
+	else
+	{
+		header("Location:../emp_dashboard.php?s=false&msg=Booking Unsuccessful! Password Invalid, Please try again");
+	}
+	mysqli_close($conn);
+	}
+	else{
 	header("Location:../emp_dashboard.php?s=false&msg=Encountered Some Technical Error!");
 }
 ?>
